@@ -99,6 +99,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_GrassGreen3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e60afcade2d0d847b28be011926b4b6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e60afcade2d0d847b28be011926b4b6, type: 3}
 --- !u!4 &4476508621047394402 stripped
