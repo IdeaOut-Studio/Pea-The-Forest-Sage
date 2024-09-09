@@ -12,6 +12,7 @@ namespace PeaTFS
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
+		public bool interaction;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -43,6 +44,11 @@ namespace PeaTFS
 		{
 			SprintInput(value.isPressed);
 		}
+		
+		public void OnInteraction(InputValue value)
+		{
+            InteractionInput(value.isPressed);
+		}
 #endif
 
 
@@ -65,6 +71,12 @@ namespace PeaTFS
 		{
 			sprint = newSprintState;
 		}
+
+		public void InteractionInput(bool newInteractionState)
+		{
+            interaction = newInteractionState;
+
+        }
 
 		private void OnApplicationFocus(bool hasFocus)
 		{

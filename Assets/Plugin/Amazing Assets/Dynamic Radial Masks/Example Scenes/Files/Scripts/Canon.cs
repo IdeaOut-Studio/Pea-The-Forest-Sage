@@ -7,7 +7,7 @@ namespace AmazingAssets.DynamicRadialMasks.Example
     {
         public GameObject prefab;
         public float impulseStrength = 1;
-
+        
         void Update()
         {
             if (DRMInput.GetLeftMouseButtonDown())
