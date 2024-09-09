@@ -9,6 +9,7 @@ namespace PeaTFS
     {
         [SerializeField] private SphereCollider radialCollider;
         [SerializeField] private DRMGameObject radialObject;
+        [SerializeField] private float growthSpeed = 0.5f;
 
         private bool isGrowth = false;
         private float radius = 6f;
@@ -46,7 +47,7 @@ namespace PeaTFS
 
             while(isGrowth)
             {
-                radius += Time.deltaTime;
+                radius += (Time.deltaTime*growthSpeed);
 
                 radialCollider.radius = radius;
                 radialObject.radius = radius;
