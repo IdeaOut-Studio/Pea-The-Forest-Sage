@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [Header("Game State")]
-    [SerializeField] private GameState gameState;
+    //[Header("Game State")]
+    private GameState gameState;
 
     /* Player Input */
     private PlayerInput playerInput;
@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         playerInput.enabled = false;
+        OnGameStateChange(GameState.Start);
     }
 
     public void OnGameStateChange(GameState gameState)
@@ -42,29 +43,48 @@ public class GameManager : MonoBehaviour
 
                 break;
             case GameState.Start:
-                playerInput.enabled = true;
+                StartGame();
 
                 break;
             case GameState.Pause:
-                playerInput.enabled = false;
+                PauseGame();
 
                 break;
             case GameState.UnPause:
-                playerInput.enabled = true;
+                UnPauseGame();
 
                 break;
             case GameState.GameOver:
-                playerInput.enabled = false;
+                GameOver(false);
 
                 break;
             case GameState.Victory:
-                playerInput.enabled = false;
+                GameOver(true);
 
                 break;
 
         }
     }
 
+    private void GameOver(bool _isWin)
+    {
+        playerInput.enabled = false;
+    }
+
+    private void UnPauseGame()
+    {
+        playerInput.enabled = true;
+    }
+
+    private void PauseGame()
+    {
+        playerInput.enabled = false;
+    }
+
+    private void StartGame()
+    {
+        playerInput.enabled = true;
+    }
 }
 
 [System.Serializable]
