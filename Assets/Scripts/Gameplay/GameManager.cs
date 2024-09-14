@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -16,6 +17,9 @@ namespace PeaTFS
         /* Player Input */
         private PlayerInput playerInput;
 
+        [Header("Timer Setup")]
+        [SerializeField]private int timer = 300;
+        [SerializeField]private TextMeshProUGUI textTimer;
 
         private void Awake()
         {
@@ -35,6 +39,32 @@ namespace PeaTFS
         {
             playerInput.enabled = false;
             OnGameStateChange(GameState.Start);
+        }
+
+        private void SetTextTimer()
+        {
+            int min = timer / 60;
+            int sec = timer % 60;
+            if(sec >= 10)
+            {
+                textTimer.text = "0" + min + ":" + sec;
+            }
+            else
+            {
+                textTimer.text = "0" + min + ":0" + sec;
+            }
+
+            
+        }
+
+        IEnumerator Countdown()
+        {
+            while(timer > 0)
+            {
+                yield return new WaitForSeconds(1);
+                timer -= 1;
+                SetTextTimer();
+            }
         }
 
         public void OnGameStateChange(GameState gameState)
@@ -70,6 +100,7 @@ namespace PeaTFS
 
         private void GameOver(bool _isWin)
         {
+            StopCoroutine(Countdown());
             playerInput.enabled = false;
 
             if (_isWin)
@@ -85,16 +116,19 @@ namespace PeaTFS
         private void UnPauseGame()
         {
             playerInput.enabled = true;
+            StartCoroutine(Countdown());
         }
 
         private void PauseGame()
         {
             playerInput.enabled = false;
+            StopCoroutine(Countdown());
         }
 
         private void StartGame()
         {
             playerInput.enabled = true;
+            StartCoroutine(Countdown());
         }
     }
 }

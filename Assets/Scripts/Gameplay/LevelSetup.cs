@@ -1,13 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 namespace PeaTFS
 {
-    public class LevelSetup : MonoBehaviour
+    public class MenuLevelSetup : MonoBehaviour
     {
-        
+
+        private void Awake()
+        {
+            GetGameCanvas();
+        }
+
+        public void NextScene(string _nextScene)
+        {
+            SceneManager.LoadScene(_nextScene);
+        }
+
+        public void RestartScene()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
+        public void GetGameCanvas()
+        {
+
+        }
     }    
 }

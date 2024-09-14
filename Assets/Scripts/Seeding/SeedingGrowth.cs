@@ -66,7 +66,6 @@ namespace PeaTFS
 
             if (other.CompareTag("FinishBorder"))
             {
-                Debug.Log("Finish Border");
                 StopSeeding();
 
                 GameManager.Instance.OnGameStateChange(GameState.Victory);

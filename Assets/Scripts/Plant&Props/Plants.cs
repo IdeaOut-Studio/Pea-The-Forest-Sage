@@ -11,6 +11,11 @@ public class Plants : MonoBehaviour
     public Vector3 origin = Vector3.one;
     public Vector3 target = new Vector3(1.25f, 1.25f, 1.25f);
 
+    [Header("Sound Effect")]
+    [SerializeField] private AudioClip[] sfxClips;
+    [SerializeField] private AudioSource sfxAud;
+    [SerializeField] private bool isActiveSound = false;
+
     [SerializeField] private float durationAnim = 1f;
     private bool isDeathTree = true;
     private Collider collider;
@@ -22,6 +27,8 @@ public class Plants : MonoBehaviour
 
     public void Growth(float _durationGrow)
     {
+        if(isActiveSound)
+            OnSfxTrigger();
         StartCoroutine(Growing(target, origin, _durationGrow));
     }
 
@@ -55,6 +62,12 @@ public class Plants : MonoBehaviour
         }
         //yield return new WaitForSeconds(0.5f);
         //Destroy(this.gameObject);
+    }
+    
+    private void OnSfxTrigger()
+    {
+        int idx = Random.Range(0, sfxClips.Length - 1);
+        sfxAud.PlayOneShot(sfxClips[idx]);
     }
 
     private void OnTriggerEnter(Collider other)
