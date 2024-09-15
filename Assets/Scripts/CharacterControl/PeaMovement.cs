@@ -110,6 +110,10 @@ namespace PeaTFS
 
         private bool _hasAnimator;
 
+        /* Game Play Section */
+        private bool isGameRunning;
+        public bool IsGameRunning { set => isGameRunning = value; }
+
         private bool IsCurrentDeviceMouse
         {
             get
@@ -158,14 +162,19 @@ namespace PeaTFS
         {
             _hasAnimator = TryGetComponent(out _animator);
 
-            JumpAndGravity();
-            GroundedCheck();
-            Move();
+            if (isGameRunning)
+            {
+                JumpAndGravity();
+                GroundedCheck();
+                Move();
+
+            }
         }
 
         private void LateUpdate()
         {
-            CameraRotation();
+            if(isGameRunning)
+                CameraRotation();
         }
 
         private void AssignAnimationIDs()
@@ -341,6 +350,7 @@ namespace PeaTFS
 
                 // if we are not grounded, do not jump
                 _input.jump = false;
+                
             }
 
             // apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)

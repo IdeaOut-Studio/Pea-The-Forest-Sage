@@ -10,15 +10,19 @@ namespace PeaTFS
 	{
         #if ENABLE_INPUT_SYSTEM
                 private PlayerInput _playerInput;
-        #endif
+#endif
 
 		private PeaMovementInput _input;
+        
 
         [Header("Radial Seeding Growth")]
         [SerializeField] private SeedingGrowth seedingGrowth;
 
         public LayerMask layerPlantMedia;
         public ActionType actionType = ActionType.None;
+
+        private bool isRunning = false;
+        public bool IsRunning {set => isRunning = value; }
 
         private bool IsCurrentDeviceMouse
         {
@@ -32,8 +36,10 @@ namespace PeaTFS
             }
         }
 
+
         private void Start()
         {
+            actionType = ActionType.None;
             _input = GetComponent<PeaMovementInput>();
 #if ENABLE_INPUT_SYSTEM
             _playerInput = GetComponent<PlayerInput>();
@@ -44,11 +50,15 @@ namespace PeaTFS
             {
                 seedingGrowth = FindObjectOfType<SeedingGrowth>();
             }
+
+            
         }
 
         private void Update()
         {
-            ExecuteAction();
+            if(isRunning)
+                ExecuteAction();
+            PauseMenu();
         }
         /*
         private void FixedUpdate()
@@ -82,6 +92,28 @@ namespace PeaTFS
                         
                     }
                 }
+            }
+            else
+            {
+                _input.interaction = false;
+            }
+
+        }
+
+        private void PauseMenu()
+        {
+            if (_input.pauseMenu)
+            {
+                bool isPause = GameManager.Instance.IsGamePaused();
+                if (isPause)
+                {
+                    GameManager.Instance.OnGameStateChange(GameState.Resume);
+                }
+                else    
+                {
+                    GameManager.Instance.OnGameStateChange(GameState.Pause);
+                }
+                _input.pauseMenu = false;
             }
         }
 

@@ -11,6 +11,7 @@ namespace PeaTFS
         [SerializeField] private SphereCollider radialCollider;
         [SerializeField] private DRMGameObject radialObject;
         [SerializeField] private float growthSpeed = 0.5f;
+        [SerializeField] private GameObject arableSphereEffect;
 
         private bool isGrowth = false;
         private float radius = 6f;
@@ -42,7 +43,7 @@ namespace PeaTFS
         {
             if (firstStart)
             {
-                yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(5f);
             }
 
 
@@ -52,6 +53,7 @@ namespace PeaTFS
 
                 radialCollider.radius = radius;
                 radialObject.radius = radius;
+                arableSphereEffect.transform.localScale = Vector3.one*radius;
                 yield return null;
             }
         }

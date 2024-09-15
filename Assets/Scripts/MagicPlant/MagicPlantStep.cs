@@ -8,6 +8,7 @@ public class MagicPlantStep : MonoBehaviour
     public AnimationCurve animationCurve;
     public Vector3 origin = Vector3.one;
     public Vector3 target = new Vector3(1.25f, 1.25f, 1.25f);
+    public bool isAdult = false;
 
     public void Growth(float _durationGrow)
     {
@@ -28,6 +29,11 @@ public class MagicPlantStep : MonoBehaviour
             float curvePercent = animationCurve.Evaluate(percent);
 
             transform.localScale = Vector3.Lerp(_origin, _target, curvePercent);
+
+            if (isAdult)
+            {
+                mesh.GetComponent<Animator>().SetTrigger("Purifying");
+            }
 
             yield return null;
         }

@@ -13,9 +13,15 @@ namespace PeaTFS
 
         //[Header("Game State")]
         private GameState gameState;
-
+        private bool isGamePaused;
         /* Player Input */
-        private PlayerInput playerInput;
+        //private PlayerInput playerInput;
+        private PeaMovement peaMovement;
+        private PeaAction peaAction;
+
+        [Header("Menu Setting")]
+        [SerializeField] private UI_MainMenu panelPauseMenu;
+        [SerializeField] private UI_GameOver panelGameOver;
 
         [Header("Timer Setup")]
         [SerializeField]private int timer = 300;
@@ -32,12 +38,19 @@ namespace PeaTFS
                 Destroy(this.gameObject);
             }
 
-            playerInput = FindAnyObjectByType<PlayerInput>();
+            //playerInput = FindAnyObjectByType<PlayerInput>();
         }
 
         private void Start()
         {
-            playerInput.enabled = false;
+            if (peaMovement == null)
+            {
+                peaMovement = FindObjectOfType<PeaMovement>();
+            }
+            if (peaAction == null)
+                peaAction = FindObjectOfType<PeaAction>();
+
+            isGamePaused = true;
             OnGameStateChange(GameState.Start);
         }
 
@@ -62,9 +75,20 @@ namespace PeaTFS
             while(timer > 0)
             {
                 yield return new WaitForSeconds(1);
-                timer -= 1;
-                SetTextTimer();
+                if (!isGamePaused)
+                {
+                    timer -= 1;
+                    SetTextTimer();
+
+                }
             }
+
+            OnGameStateChange(GameState.GameOver);
+        }
+
+        public bool IsGamePaused()
+        {
+            return isGamePaused;
         }
 
         public void OnGameStateChange(GameState gameState)
@@ -72,26 +96,31 @@ namespace PeaTFS
             switch (gameState)
             {
                 case GameState.Loading:
-
+                    isGamePaused = true;
                     break;
                 case GameState.Start:
+                    isGamePaused = false;
                     StartGame();
 
                     break;
                 case GameState.Pause:
+                    isGamePaused = true;
                     PauseGame();
 
                     break;
-                case GameState.UnPause:
-                    UnPauseGame();
+                case GameState.Resume:
+                    isGamePaused = false;
+                    Resume();
 
                     break;
                 case GameState.GameOver:
+                    isGamePaused = true;
                     GameOver(false);
 
                     break;
                 case GameState.Victory:
                     GameOver(true);
+                    isGamePaused = true;
 
                     break;
 
@@ -100,8 +129,10 @@ namespace PeaTFS
 
         private void GameOver(bool _isWin)
         {
-            StopCoroutine(Countdown());
-            playerInput.enabled = false;
+            peaMovement.IsGameRunning = false;
+            peaAction.IsRunning= false;
+            CursorVisible(true);
+            panelGameOver.GameOver(_isWin, timer);
 
             if (_isWin)
             {
@@ -113,22 +144,47 @@ namespace PeaTFS
             }
         }
 
-        private void UnPauseGame()
+        private void Resume()
         {
-            playerInput.enabled = true;
+            peaMovement.IsGameRunning = true;
+            peaAction.IsRunning = true;
+            CursorVisible(false);
+            panelPauseMenu.OpenMenu(false);
             StartCoroutine(Countdown());
         }
 
+
         private void PauseGame()
         {
-            playerInput.enabled = false;
+            peaMovement.IsGameRunning = false;
+            peaAction.IsRunning = false;
+            CursorVisible(true);
+            panelPauseMenu.OpenMenu(true);
             StopCoroutine(Countdown());
         }
 
         private void StartGame()
         {
-            playerInput.enabled = true;
+            peaMovement.IsGameRunning = true;
+            peaAction.IsRunning = true;
+            CursorVisible(false);
+            panelPauseMenu.OpenMenu(false);
             StartCoroutine(Countdown());
+        }
+        private void CursorVisible(bool _isVisible)
+        {
+            if(_isVisible)
+            {
+                //playerInput.enabled = false;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible= true;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+
+            }
         }
     }
 }
@@ -140,7 +196,7 @@ public enum GameState
     Loading,
     Start,
     Pause,
-    UnPause,
+    Resume,
     GameOver,
     Victory
 }

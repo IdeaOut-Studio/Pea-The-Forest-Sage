@@ -15,10 +15,19 @@ public class LoadingGame : MonoBehaviour
 
     public void LoadLevelBtn(string levelToLoad)
     {
-        mainMenu.SetActive(false);
-        loadingScreen.SetActive(true);
 
-        StartCoroutine(LoadLevelAsync(levelToLoad));
+        if (levelToLoad != "")
+        {
+            if(mainMenu!= null)
+                mainMenu.SetActive(false);
+            loadingScreen.SetActive(true);
+            StartCoroutine(LoadLevelAsync(levelToLoad));
+
+        }
+        else
+        {
+            Debug.Log("locked");
+        }
     }
 
     IEnumerator LoadLevelAsync(string levelToLoad)

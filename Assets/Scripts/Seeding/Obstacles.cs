@@ -12,12 +12,19 @@ namespace PeaTFS
         [SerializeField] private GameObject obstacleObject;
         [SerializeField] private ObstacleType type = ObstacleType.Defatult;
 
+        [SerializeField] private MeshRenderer toxicMeshMaterial;
+        [SerializeField] private Material freshMaterial;
 
         public void PurifyObstacle()
         {
             if(obstacleObject != null)
             {
                 Destroy(obstacleObject);
+            }
+
+            if(toxicMeshMaterial != null)
+            {
+                toxicMeshMaterial.material= freshMaterial;
             }
         }
     }

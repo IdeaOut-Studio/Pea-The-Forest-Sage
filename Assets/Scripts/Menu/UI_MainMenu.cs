@@ -1,3 +1,4 @@
+using PeaTFS;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,12 +8,17 @@ public class UI_MainMenu : MonoBehaviour
 {
     public AudioSource audio;
     public AudioClip clipClick;
-
+    public GameObject mainMenu;
     public GameObject[] panelModal;
 
-    public void PlayGame()
+    public void ResumeGame()
     {
+        GameManager.Instance.OnGameStateChange(GameState.Resume);
+    }
 
+    public void OpenMenu(bool isOpen)
+    {
+        mainMenu.SetActive(isOpen);
     }
 
     public void OpenPanelModal(GameObject _panel)

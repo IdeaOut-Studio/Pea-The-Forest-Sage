@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 namespace PeaTFS
 {
@@ -13,25 +14,33 @@ namespace PeaTFS
         [Header("Action Type")]
         [SerializeField] private ActionType actionType = ActionType.MagicPlant;
 
+        [Header("Effects")]
+        [SerializeField] private Particles particleFX;
+        [SerializeField] private AudioSource audSFX;
+        [SerializeField] private AudioClip audFXClip;
+
         private MagicPlant magicPlant;
 
-        private bool isOnce = true;
+        private bool toxic = true;
 
         public void ActivateSeeding()
         {
-            if (isOnce)
+            if (toxic)
             {
                 /* Do Some Animation of Activating, and Cinemachine Here*/
                 this.GetComponent<SphereCollider>().enabled = false;
 
                 magicPlant = Instantiate(prefabMagicPlant, this.transform);
                 Debug.Log("Activating Seeding / Spawn Magic Plant "+magicPlant.name);
-
+                particleFX.ActivateAllParticle();
+                audSFX.Stop();
+                audSFX.loop= false;
+                audSFX.PlayOneShot(audFXClip);
                 magicPlant.SetupPlant(magicPlantObject);
 
                 notify.DestroyNotif();
 
-                isOnce = false;
+                toxic = false;
             }
         }
 
@@ -39,7 +48,7 @@ namespace PeaTFS
         {
             if (other.CompareTag("Player"))
             {
-                
+                particleFX.ActivateBaseParticle();
                 notify.direction = Direction.up;
                 notify.Activate();
 
@@ -47,13 +56,23 @@ namespace PeaTFS
                 action.GetPlantMedia(this);
                 action.actionType = actionType;
             }
+
+            if (other.CompareTag("GrowingArea"))
+            {
+                if (toxic)
+                {
+                    particleFX.ActivateBaseParticle();
+                    audSFX.Play();
+
+                }
+            }
         }
 
         private void OnTriggerExit(Collider other)
         {
             if (other.CompareTag("Player"))
             {
-                
+                particleFX.DisableParticle();
                 notify.direction = Direction.down;
                 notify.Activate();
 

@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
@@ -13,6 +14,7 @@ namespace PeaTFS
 		public bool jump;
 		public bool sprint;
 		public bool interaction;
+		public bool pauseMenu;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -49,6 +51,11 @@ namespace PeaTFS
 		{
             InteractionInput(value.isPressed);
 		}
+
+		public void OnPauseMenu(InputValue value)
+		{
+			PauseMenu(value.isPressed);
+		}
 #endif
 
 
@@ -78,9 +85,14 @@ namespace PeaTFS
 
         }
 
+		public void PauseMenu(bool newPauseState)
+		{
+            pauseMenu = newPauseState;
+        }
+
 		private void OnApplicationFocus(bool hasFocus)
 		{
-			SetCursorState(cursorLocked);
+			//SetCursorState(cursorLocked);
 		}
 
 		private void SetCursorState(bool newState)
