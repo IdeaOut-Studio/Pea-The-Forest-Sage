@@ -164,7 +164,7 @@ namespace PeaTFS
 
             if (isGameRunning)
             {
-                JumpAndGravity();
+                //JumpAndGravity();
                 GroundedCheck();
                 Move();
 

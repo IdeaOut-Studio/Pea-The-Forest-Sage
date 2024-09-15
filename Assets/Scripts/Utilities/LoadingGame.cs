@@ -13,6 +13,7 @@ public class LoadingGame : MonoBehaviour
     [Header("Slider")]
     [SerializeField] private Slider loadingSlider;
 
+
     public void LoadLevelBtn(string levelToLoad)
     {
 

@@ -9,7 +9,40 @@ public class UI_MainMenu : MonoBehaviour
     public AudioSource audio;
     public AudioClip clipClick;
     public GameObject mainMenu;
+    public GameObject uiSelectLevel;
     public GameObject[] panelModal;
+
+    private bool ondemandComplete;
+    private LoadingGame loadGame;
+    private void Start()
+    {
+        loadGame = GetComponent<LoadingGame>();
+
+        int od = PlayerPrefs.GetInt("OndemandComplete", 0);
+        //int od = 0;
+        if (od == 0)
+        {
+            ondemandComplete = false;
+        }
+        else if (od == 1)
+        {
+            ondemandComplete = true;
+        }
+
+    }
+
+    public void PLayGameMenu()
+    {
+        if(ondemandComplete)
+        {
+            OpenPanelModal(uiSelectLevel);
+        }
+        else
+        {
+            loadGame.LoadLevelBtn("L_Ondemand");
+
+        }
+    }
 
     public void ResumeGame()
     {

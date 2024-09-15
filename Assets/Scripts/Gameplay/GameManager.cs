@@ -27,6 +27,7 @@ namespace PeaTFS
         [SerializeField]private int timer = 300;
         [SerializeField]private TextMeshProUGUI textTimer;
 
+        public bool isOndemandLevel = false;
         private void Awake()
         {
             if (Instance == null)
@@ -136,6 +137,10 @@ namespace PeaTFS
 
             if (_isWin)
             {
+                if(isOndemandLevel)
+                {
+                    PlayerPrefs.SetInt("OndemandComplete", 1);
+                }
                 Debug.Log("Victory");
             }
             else

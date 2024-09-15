@@ -23,12 +23,19 @@ public class Plants : MonoBehaviour
     private void Awake()
     {
         collider = GetComponent<Collider>();
+        if(!isActiveSound)
+        {
+            Destroy(gameObject.GetComponent<AudioSource>());
+        }
     }
 
     public void Growth(float _durationGrow)
     {
-        if(isActiveSound)
+        if (isActiveSound)
+        {
             OnSfxTrigger();
+        }
+
         StartCoroutine(Growing(target, origin, _durationGrow));
     }
 

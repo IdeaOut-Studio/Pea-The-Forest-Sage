@@ -24,7 +24,7 @@ namespace PeaTFS
 
             if(toxicMeshMaterial != null)
             {
-                toxicMeshMaterial.material= freshMaterial;
+                toxicMeshMaterial.material= freshMaterial;  
             }
         }
     }
