@@ -93,7 +93,7 @@ Material:
     m_Floats:
     - Vector1_359FBA1E: 5
     - Vector1_C76F9A5A: 6
-    - _BaseIntensity: 6
+    - _BaseIntensity: 0.41
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
