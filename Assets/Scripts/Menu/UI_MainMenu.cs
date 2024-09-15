@@ -31,6 +31,12 @@ public class UI_MainMenu : MonoBehaviour
 
     }
 
+    public void ResetGame()
+    {
+        PlayerPrefs.SetInt("OndemandComplete", 0);
+        ondemandComplete= false;
+    }
+
     public void PLayGameMenu()
     {
         if(ondemandComplete)
