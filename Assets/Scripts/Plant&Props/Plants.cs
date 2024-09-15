@@ -23,7 +23,13 @@ public class Plants : MonoBehaviour
     private void Awake()
     {
         collider = GetComponent<Collider>();
-        if(!isActiveSound)
+
+
+        bool randomActiveSound = Random.value < 0.5f;
+
+        isActiveSound = randomActiveSound;
+
+        if (!isActiveSound)
         {
             Destroy(gameObject.GetComponent<AudioSource>());
         }
