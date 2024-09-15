@@ -62,10 +62,10 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.25
+    m_Value: 0.395
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.4
+    m_Value: 0.369
   rounded:
     m_OverrideState: 0
     m_Value: 0
@@ -82,27 +82,10 @@ MonoBehaviour:
   m_Name: ExampleSceneProfile
   m_EditorClassIdentifier: 
   components:
-  - {fileID: 849379129802519247}
   - {fileID: -7893295128165547882}
   - {fileID: -7011558710299706105}
   - {fileID: 5383118995061205085}
   - {fileID: 3791100400416358804}
---- !u!114 &849379129802519247
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
-  m_Name: Tonemapping
-  m_EditorClassIdentifier: 
-  active: 1
-  mode:
-    m_OverrideState: 1
-    m_Value: 2
 --- !u!114 &3791100400416358804
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -121,19 +104,19 @@ MonoBehaviour:
     m_Value: 1
   gaussianStart:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 25
   gaussianEnd:
     m_OverrideState: 0
     m_Value: 0
   gaussianMaxRadius:
-    m_OverrideState: 0
-    m_Value: 1.075
+    m_OverrideState: 1
+    m_Value: 0.6
   highQualitySampling:
     m_OverrideState: 0
     m_Value: 0
   focusDistance:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 1.17
   aperture:
     m_OverrideState: 0
     m_Value: 5.6

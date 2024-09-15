@@ -104,7 +104,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
-    - _NormalSctrength: 0.35
+    - _NormalSctrength: 0.44
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
@@ -114,13 +114,13 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 5
-    - _Strength: 0.04
+    - _Strength: 0.1
     - _Surface: 1
     - _UVTIle: 0
     - _WorkflowMode: 1
     - _ZWrite: 0
-    - _displace: 1.25
-    - _smoothness: 0.895
+    - _displace: 1.35
+    - _smoothness: 0.977
     m_Colors:
     - _BaseColor: {r: 0.37735847, g: 0.65413976, b: 0.9433962, a: 0.6745098}
     - _Color: {r: 0.37735844, g: 0.65413964, b: 0.9433962, a: 0.6745098}

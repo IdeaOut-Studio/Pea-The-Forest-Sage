@@ -49,6 +49,8 @@ MonoBehaviour:
   timeToPurify: 10
   obstacleObject: {fileID: 8885210777847669573}
   type: 2
+  toxicMeshMaterial: {fileID: 0}
+  freshMaterial: {fileID: 0}
 --- !u!1 &8885210777024940671
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,10 +352,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 264cadff80c322e498da24df1e8c3da9,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 264cadff80c322e498da24df1e8c3da9,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 264cadff80c322e498da24df1e8c3da9,
         type: 3}
       propertyPath: m_Name
       value: SM_Env_PlantArea
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 264cadff80c322e498da24df1e8c3da9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 264cadff80c322e498da24df1e8c3da9, type: 3}
@@ -370,10 +387,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1672168406502502781}
     m_Modifications:
+    - target: {fileID: 157517739872785034, guid: 7f42696b422b0554c8b143677182594e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3029331768199324294, guid: 7f42696b422b0554c8b143677182594e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032379905002808577, guid: 7f42696b422b0554c8b143677182594e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4683399727442521295, guid: 7f42696b422b0554c8b143677182594e,
         type: 3}
       propertyPath: m_Name
       value: Particle_Seed
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683399727442521295, guid: 7f42696b422b0554c8b143677182594e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5635077516255864846, guid: 7f42696b422b0554c8b143677182594e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7278160484817411152, guid: 7f42696b422b0554c8b143677182594e,
         type: 3}

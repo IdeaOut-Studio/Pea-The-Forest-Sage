@@ -61,6 +61,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7967424333356936280}
     m_Modifications:
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8282663507959713307, guid: bc1df701fc233d24db0687eb6d7a9e79,
         type: 3}
       propertyPath: m_Name
@@ -141,6 +156,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7967424333356936280}
     m_Modifications:
+    - target: {fileID: 5344438625586108881, guid: 160503c03731c5f4f92d3349a816823c,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5344438625586108881, guid: 160503c03731c5f4f92d3349a816823c,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5344438625586108881, guid: 160503c03731c5f4f92d3349a816823c,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5848978466711566340, guid: 160503c03731c5f4f92d3349a816823c,
         type: 3}
       propertyPath: m_Name
@@ -286,6 +316,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Cliff_4 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3610500910225943130, guid: 0ce47b1509ae6d341bf28e00a27dd3ca,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610500910225943130, guid: 0ce47b1509ae6d341bf28e00a27dd3ca,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610500910225943130, guid: 0ce47b1509ae6d341bf28e00a27dd3ca,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce47b1509ae6d341bf28e00a27dd3ca, type: 3}
 --- !u!4 &312476454742451104 stripped
@@ -301,6 +346,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7967424333356936280}
     m_Modifications:
+    - target: {fileID: 5344438625586108881, guid: 160503c03731c5f4f92d3349a816823c,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5344438625586108881, guid: 160503c03731c5f4f92d3349a816823c,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5344438625586108881, guid: 160503c03731c5f4f92d3349a816823c,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5848978466711566340, guid: 160503c03731c5f4f92d3349a816823c,
         type: 3}
       propertyPath: m_Name
@@ -376,6 +436,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7967424333356936280}
     m_Modifications:
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8282663507959713307, guid: bc1df701fc233d24db0687eb6d7a9e79,
         type: 3}
       propertyPath: m_Name
@@ -526,6 +601,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6818898287686213220, guid: 66c6238427050ac4eaa8e96b51809a60,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818898287686213220, guid: 66c6238427050ac4eaa8e96b51809a60,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818898287686213220, guid: 66c6238427050ac4eaa8e96b51809a60,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66c6238427050ac4eaa8e96b51809a60, type: 3}
 --- !u!4 &2340536133561566126 stripped
@@ -541,6 +631,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7967424333356936280}
     m_Modifications:
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8282663507959713307, guid: bc1df701fc233d24db0687eb6d7a9e79,
         type: 3}
       propertyPath: m_Name
@@ -626,6 +731,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7967424333356936280}
     m_Modifications:
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8282663507959713307, guid: bc1df701fc233d24db0687eb6d7a9e79,
         type: 3}
       propertyPath: m_Name
@@ -761,6 +881,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Cliff_4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3610500910225943130, guid: 0ce47b1509ae6d341bf28e00a27dd3ca,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610500910225943130, guid: 0ce47b1509ae6d341bf28e00a27dd3ca,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610500910225943130, guid: 0ce47b1509ae6d341bf28e00a27dd3ca,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce47b1509ae6d341bf28e00a27dd3ca, type: 3}
 --- !u!4 &5530919081596291732 stripped
@@ -841,6 +976,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Cliff_4 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3610500910225943130, guid: 0ce47b1509ae6d341bf28e00a27dd3ca,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610500910225943130, guid: 0ce47b1509ae6d341bf28e00a27dd3ca,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610500910225943130, guid: 0ce47b1509ae6d341bf28e00a27dd3ca,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce47b1509ae6d341bf28e00a27dd3ca, type: 3}
 --- !u!4 &5530919081454928970 stripped
@@ -856,6 +1006,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7967424333356936280}
     m_Modifications:
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8282663507959713307, guid: bc1df701fc233d24db0687eb6d7a9e79,
         type: 3}
       propertyPath: m_Name
@@ -946,6 +1111,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7967424333356936280}
     m_Modifications:
+    - target: {fileID: 5344438625586108881, guid: 160503c03731c5f4f92d3349a816823c,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5344438625586108881, guid: 160503c03731c5f4f92d3349a816823c,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5344438625586108881, guid: 160503c03731c5f4f92d3349a816823c,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5848978466711566340, guid: 160503c03731c5f4f92d3349a816823c,
         type: 3}
       propertyPath: m_Name
@@ -1091,6 +1271,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Cliff_4
       objectReference: {fileID: 0}
+    - target: {fileID: 3610500910225943130, guid: 0ce47b1509ae6d341bf28e00a27dd3ca,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610500910225943130, guid: 0ce47b1509ae6d341bf28e00a27dd3ca,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610500910225943130, guid: 0ce47b1509ae6d341bf28e00a27dd3ca,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce47b1509ae6d341bf28e00a27dd3ca, type: 3}
 --- !u!4 &5530919081258665665 stripped
@@ -1106,6 +1301,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7967424333356936280}
     m_Modifications:
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8282663507959713307, guid: bc1df701fc233d24db0687eb6d7a9e79,
         type: 3}
       propertyPath: m_Name
@@ -1271,6 +1481,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6818898287686213220, guid: 66c6238427050ac4eaa8e96b51809a60,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818898287686213220, guid: 66c6238427050ac4eaa8e96b51809a60,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818898287686213220, guid: 66c6238427050ac4eaa8e96b51809a60,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66c6238427050ac4eaa8e96b51809a60, type: 3}
 --- !u!4 &2340536132163688128 stripped
@@ -1361,6 +1586,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Cliff_4 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3610500910225943130, guid: 0ce47b1509ae6d341bf28e00a27dd3ca,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610500910225943130, guid: 0ce47b1509ae6d341bf28e00a27dd3ca,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610500910225943130, guid: 0ce47b1509ae6d341bf28e00a27dd3ca,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce47b1509ae6d341bf28e00a27dd3ca, type: 3}
 --- !u!4 &5530919080975384721 stripped
@@ -1376,6 +1616,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7967424333356936280}
     m_Modifications:
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8282663507959713307, guid: bc1df701fc233d24db0687eb6d7a9e79,
         type: 3}
       propertyPath: m_Name
@@ -1466,6 +1721,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7967424333356936280}
     m_Modifications:
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8282663507959713307, guid: bc1df701fc233d24db0687eb6d7a9e79,
         type: 3}
       propertyPath: m_Name
@@ -1541,6 +1811,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7967424333356936280}
     m_Modifications:
+    - target: {fileID: 5344438625586108881, guid: 160503c03731c5f4f92d3349a816823c,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5344438625586108881, guid: 160503c03731c5f4f92d3349a816823c,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5344438625586108881, guid: 160503c03731c5f4f92d3349a816823c,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5848978466711566340, guid: 160503c03731c5f4f92d3349a816823c,
         type: 3}
       propertyPath: m_Name
@@ -1626,6 +1911,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7967424333356936280}
     m_Modifications:
+    - target: {fileID: 5344438625586108881, guid: 160503c03731c5f4f92d3349a816823c,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5344438625586108881, guid: 160503c03731c5f4f92d3349a816823c,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5344438625586108881, guid: 160503c03731c5f4f92d3349a816823c,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5848978466711566340, guid: 160503c03731c5f4f92d3349a816823c,
         type: 3}
       propertyPath: m_Name
@@ -1701,6 +2001,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7967424333356936280}
     m_Modifications:
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633903611896410062, guid: bc1df701fc233d24db0687eb6d7a9e79,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8282663507959713307, guid: bc1df701fc233d24db0687eb6d7a9e79,
         type: 3}
       propertyPath: m_Name
@@ -1781,6 +2096,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7967424333356936280}
     m_Modifications:
+    - target: {fileID: 5344438625586108881, guid: 160503c03731c5f4f92d3349a816823c,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5344438625586108881, guid: 160503c03731c5f4f92d3349a816823c,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5344438625586108881, guid: 160503c03731c5f4f92d3349a816823c,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5848978466711566340, guid: 160503c03731c5f4f92d3349a816823c,
         type: 3}
       propertyPath: m_Name
@@ -1925,6 +2255,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Cliff_4 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610500910225943130, guid: 0ce47b1509ae6d341bf28e00a27dd3ca,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610500910225943130, guid: 0ce47b1509ae6d341bf28e00a27dd3ca,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610500910225943130, guid: 0ce47b1509ae6d341bf28e00a27dd3ca,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce47b1509ae6d341bf28e00a27dd3ca, type: 3}
