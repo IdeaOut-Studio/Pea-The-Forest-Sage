@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5759d00fdd7fb014a90fec845997d1ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToPurify: 10
+  timeToPurify: 5
   obstacleObject: {fileID: 8885210777847669573}
   type: 2
   toxicMeshMaterial: {fileID: 0}

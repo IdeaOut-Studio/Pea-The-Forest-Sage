@@ -23,35 +23,40 @@ namespace PeaTFS
 
         private bool toxic = true;
         public bool isOndemand = false;
+        public bool isInteractable=false;
 
         public void ActivateSeeding()
         {
             if (toxic)
             {
-                /* Do Some Animation of Activating, and Cinemachine Here*/
-                this.GetComponent<SphereCollider>().enabled = false;
-
-                magicPlant = Instantiate(prefabMagicPlant, this.transform);
-                particleFX.ActivateAllParticle();
-                audSFX.Stop();
-                audSFX.loop= false;
-                audSFX.PlayOneShot(audFXClip);
-                magicPlant.SetupPlant(magicPlantObject);
-
-                notify.DestroyNotif();
-
-                if (isOndemand)
+                if(isInteractable)
                 {
-                    if (OnDemandTraining.Instance.ondemandState == OnDemandStates.sixth)
+                    /* Do Some Animation of Activating, and Cinemachine Here*/
+                    this.GetComponent<SphereCollider>().enabled = false;
+
+                    magicPlant = Instantiate(prefabMagicPlant, this.transform);
+                    particleFX.ActivateAllParticle();
+                    audSFX.Stop();
+                    audSFX.loop= false;
+                    audSFX.PlayOneShot(audFXClip);
+                    magicPlant.SetupPlant(magicPlantObject);
+
+                    notify.DestroyNotif();
+
+                    if (isOndemand)
                     {
-                        OnDemandTraining.Instance.ondemandState = OnDemandStates.sevent;
-                        OnDemandTraining.Instance.CompleteQuest();
-                        isOndemand = false;
+                        if (OnDemandTraining.Instance.ondemandState == OnDemandStates.sixth)
+                        {
+                            OnDemandTraining.Instance.ondemandState = OnDemandStates.sevent;
+                            OnDemandTraining.Instance.CompleteQuest();
+                            isOndemand = false;
 
+                        }
                     }
-                }
 
-                toxic = false;
+                    toxic = false;
+
+                }
             }
         }
 
@@ -85,6 +90,7 @@ namespace PeaTFS
                     audSFX.Play();
                 }
 
+                isInteractable = true;
                 if (isOndemand)
                 {
                     if (OnDemandTraining.Instance.ondemandState == OnDemandStates.fiveth)
