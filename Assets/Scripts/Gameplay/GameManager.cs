@@ -139,6 +139,8 @@ namespace PeaTFS
             {
                 if(isOndemandLevel)
                 {
+                    OnDemandTraining.Instance.ondemandState = OnDemandStates.none;
+                    OnDemandTraining.Instance.HideQuest();
                     PlayerPrefs.SetInt("OndemandComplete", 1);
                 }
                 Debug.Log("Victory");
