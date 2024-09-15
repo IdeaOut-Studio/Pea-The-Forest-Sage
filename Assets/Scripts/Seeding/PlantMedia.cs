@@ -22,6 +22,7 @@ namespace PeaTFS
         private MagicPlant magicPlant;
 
         private bool toxic = true;
+        public bool isOndemand = false;
 
         public void ActivateSeeding()
         {
@@ -31,7 +32,6 @@ namespace PeaTFS
                 this.GetComponent<SphereCollider>().enabled = false;
 
                 magicPlant = Instantiate(prefabMagicPlant, this.transform);
-                Debug.Log("Activating Seeding / Spawn Magic Plant "+magicPlant.name);
                 particleFX.ActivateAllParticle();
                 audSFX.Stop();
                 audSFX.loop= false;
@@ -39,6 +39,17 @@ namespace PeaTFS
                 magicPlant.SetupPlant(magicPlantObject);
 
                 notify.DestroyNotif();
+
+                if (isOndemand)
+                {
+                    if (OnDemandTraining.Instance.ondemandState == OnDemandStates.sixth)
+                    {
+                        OnDemandTraining.Instance.ondemandState = OnDemandStates.sevent;
+                        OnDemandTraining.Instance.CompleteQuest();
+                        isOndemand = false;
+
+                    }
+                }
 
                 toxic = false;
             }
@@ -55,6 +66,15 @@ namespace PeaTFS
                 PeaAction action = other.GetComponent<PeaAction>();
                 action.GetPlantMedia(this);
                 action.actionType = actionType;
+
+                if (isOndemand)
+                {
+                    if(OnDemandTraining.Instance.ondemandState == OnDemandStates.fiveth)
+                    {
+                        OnDemandTraining.Instance.ondemandState = OnDemandStates.sixth;
+                        OnDemandTraining.Instance.CompleteQuest();
+                    }
+                }
             }
 
             if (other.CompareTag("GrowingArea"))
@@ -63,7 +83,14 @@ namespace PeaTFS
                 {
                     particleFX.ActivateBaseParticle();
                     audSFX.Play();
+                }
 
+                if (isOndemand)
+                {
+                    if (OnDemandTraining.Instance.ondemandState == OnDemandStates.fiveth)
+                    {
+                        OnDemandTraining.Instance.ShowQuest();
+                    }
                 }
             }
         }

@@ -23,6 +23,8 @@ namespace PeaTFS
         [SerializeField] private CinemachineVirtualCamera CN_Cam;
         [SerializeField] private Particles particleFX;
 
+        public bool isOndemand;
+
         private void Start()
         {
             arableMesh.enabled = false;
@@ -84,6 +86,16 @@ namespace PeaTFS
 
                 PeaAction action = other.GetComponent<PeaAction>();
                 action.actionType = actionType;
+                if(isOndemand)
+                {
+                    if(OnDemandTraining.Instance.ondemandState == OnDemandStates.third)
+                    {
+                        OnDemandTraining.Instance.ondemandState = OnDemandStates.forth;
+                        OnDemandTraining.Instance.CompleteQuest();
+                        isOndemand = false;
+
+                    }
+                }
             }
         }
 

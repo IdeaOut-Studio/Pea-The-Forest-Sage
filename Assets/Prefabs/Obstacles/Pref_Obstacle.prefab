@@ -109,6 +109,7 @@ MonoBehaviour:
   particleFX: {fileID: 3551563974845307888}
   audSFX: {fileID: 1827403641922818418}
   audFXClip: {fileID: 8300000, guid: a5c2367e46ba9d3438e1d6170a543b72, type: 3}
+  isOndemand: 0
 --- !u!135 &8885210777024940544
 SphereCollider:
   m_ObjectHideFlags: 0

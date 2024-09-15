@@ -38,7 +38,7 @@ namespace PeaTFS
             {
                 Destroy(this.gameObject);
             }
-
+            
             //playerInput = FindAnyObjectByType<PlayerInput>();
         }
 

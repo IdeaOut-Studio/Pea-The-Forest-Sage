@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2ca124cd4080fbf42b9f4b1c18e23e6c
+guid: 81088b6530e529549abd0bca60e06ad0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T_Sprite_UI_Move_0
+      name: T_Sprite_UI_Button-03_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 3
-        width: 147
-        height: 82
+        x: 0
+        y: 175.33334
+        width: 161
+        height: 87.666664
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,8 +143,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c631ac4761a98a04991796fa02408f56
-      internalID: -673898977
+      spriteID: 39b2ff6da8c6836448d645cb556f3d3d
+      internalID: -512875412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Sprite_UI_Button-03_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 88.333336
+        width: 161
+        height: 87.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af861a7df2b4398479e1d937055e04bb
+      internalID: 251699014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Sprite_UI_Button-03_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.3333359
+        width: 161
+        height: 87.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11929b50b82ce3047b0f18ba2a4c688d
+      internalID: 290534007
       vertices: []
       indices: 
       edges: []
@@ -152,7 +194,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 8604eff336cdc494488f31798a11c4bc
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +202,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      T_Sprite_UI_Move_0: -673898977
-      T_Sprite_UI_Move_1: 415401177
+      T_Sprite_UI_Button-03_0: -512875412
+      T_Sprite_UI_Button-03_1: 251699014
+      T_Sprite_UI_Button-03_2: 290534007
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

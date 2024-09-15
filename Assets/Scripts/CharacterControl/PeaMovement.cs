@@ -114,6 +114,7 @@ namespace PeaTFS
         private bool isGameRunning;
         public bool IsGameRunning { set => isGameRunning = value; }
 
+        public bool isOndemand = false;
         private bool IsCurrentDeviceMouse
         {
             get
@@ -224,6 +225,28 @@ namespace PeaTFS
 
         private void Move()
         {
+            if (isOndemand)
+            {
+                //OnDemandStates check = OnDemandTraining.Instance.ondemandState;
+
+                if(OnDemandTraining.Instance.ondemandState == OnDemandStates.first)
+                {
+                    if(_input.move == Vector2.up)
+                    {
+                        OnDemandTraining.Instance.ondemandState = OnDemandStates.second;
+                        OnDemandTraining.Instance.CompleteQuest();
+                    }
+                }
+                if(OnDemandTraining.Instance.ondemandState == OnDemandStates.second)
+                {
+                    if (_input.sprint)
+                    {
+                        OnDemandTraining.Instance.ondemandState = OnDemandStates.third;
+                        OnDemandTraining.Instance.CompleteQuest();
+                        isOndemand = false;
+                    }
+                }
+            }
             // set target speed based on move speed, sprint speed and if sprint is pressed
             float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
 

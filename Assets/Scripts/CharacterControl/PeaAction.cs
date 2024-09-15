@@ -13,7 +13,7 @@ namespace PeaTFS
 #endif
 
 		private PeaMovementInput _input;
-        
+        public bool isOndemand = false;
 
         [Header("Radial Seeding Growth")]
         [SerializeField] private SeedingGrowth seedingGrowth;
@@ -122,6 +122,18 @@ namespace PeaTFS
         private IEnumerator ActionSpell()
         {
             yield return null;
+            if (isOndemand)
+            {
+                if(OnDemandTraining.Instance.ondemandState == OnDemandStates.forth)
+                {
+                    OnDemandTraining.Instance.ondemandState = OnDemandStates.fiveth;
+                    OnDemandTraining.Instance.CompleteQuest();
+                    isOndemand = false;
+
+                }
+
+            }
+
             FindObjectOfType<Arable>().ActivateSeeding();
             seedingGrowth.StartSeeding();
             ResetActionType();
